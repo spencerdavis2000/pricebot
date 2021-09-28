@@ -20,8 +20,8 @@ npm run build
 ```
 By default, the .vscode/launch.json is set up for breakpoints in vsCode
 Inside of vsCode, click the debug button and then toward top click the green arrow to start the javascript debug terminal
-![debug](docs/img/debug.png)
-<!-- [<img src="docs/img/debug.png" width="200" height="200">] -->
+
+[<img src="https://github.com/spencerdavis2000/pricebot/blob/9b718d2b8bb8a58468750076c07516b4a9f5d471/docs/img/debug.PNG" width="200" height="200">]
 
 You can put in breakpoints in the index.ts if you wish
 
