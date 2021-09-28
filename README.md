@@ -20,8 +20,8 @@ npm run build
 ```
 By default, the .vscode/launch.json is set up for breakpoints in vsCode
 Inside of vsCode, click the debug button and then toward top click the green arrow to start the javascript debug terminal
-
-[<img src="docs/img/debug.png" width="200" height="200">]
+![debug](docs/img/debug.png)
+<!-- [<img src="docs/img/debug.png" width="200" height="200">] -->
 
 You can put in breakpoints in the index.ts if you wish
 
@@ -29,4 +29,4 @@ You can put in breakpoints in the index.ts if you wish
 npm run start
 ```
 
-## Deploy to aws lambda with cron as event
+## To deploy to aws lambda with cron as event
