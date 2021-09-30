@@ -28,5 +28,3 @@ You can put in breakpoints in the index.ts if you wish
 ```
 npm run start
 ```
-
-## To deploy to aws lambda with cron as event
