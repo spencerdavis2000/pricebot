@@ -1,11 +1,6 @@
 import fetch from 'node-fetch';
 import { tickers } from './interfaces/tickers';
-
-class UpholdBot {
-  constructor() {
-    this.getTickers();
-  }
-
+export class UpholdBot {
   public async getTickers(): Promise<unknown> {
     return fetch('https://api.uphold.com/v0/ticker/USD')
       .then((res: any) => res.json())
@@ -27,5 +22,12 @@ class UpholdBot {
   }
 }
 
-const pb = new UpholdBot();
-pb.getCurrencyPairs(['BTCUSD']).then((result) => console.log(result));
+export async function PriceBotOscillator(currencies: string[]): Promise<void> {
+  const upholdBot = new UpholdBot();
+  await upholdBot.getTickers();
+  const myTickers = await upholdBot.getCurrencyPairs(currencies);
+  myTickers.map((ticker) => {
+    console.log(ticker);
+  });
+}
+PriceBotOscillator(['BTCUSD']);

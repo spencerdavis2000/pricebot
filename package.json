@@ -2,8 +2,8 @@
   "name": "@spencerdavis/pricebot",
   "version": "1.0.0",
   "description": "Price bot for Uphold",
-  "type": "module",
   "main": "dist/index.js",
+  "type": "module",
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "lint": "eslint . --ext .ts",
