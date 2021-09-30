@@ -1,4 +1,5 @@
 import fetch from 'node-fetch';
+import { setTimeout } from 'timers/promises';
 import { tickers } from './interfaces/tickers';
 export class UpholdBot {
   public async getTickers(): Promise<unknown> {
@@ -22,7 +23,7 @@ export class UpholdBot {
   }
 }
 
-export async function PriceBotOscillator(currencies: string[]): Promise<void> {
+async function PriceBotOscillator(currencies: string[]): Promise<void> {
   const upholdBot = new UpholdBot();
   await upholdBot.getTickers();
   const myTickers = await upholdBot.getCurrencyPairs(currencies);
@@ -30,4 +31,15 @@ export async function PriceBotOscillator(currencies: string[]): Promise<void> {
     console.log(ticker);
   });
 }
-PriceBotOscillator(['BTCUSD']);
+
+let interval = 0;
+function start() {
+  global.setTimeout(() => {
+    PriceBotOscillator(['BTCUSD']);
+    console.log(interval);
+    interval++;
+    start();
+  }, 5000);
+}
+
+start();
