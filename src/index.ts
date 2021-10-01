@@ -22,7 +22,14 @@ export class UpholdBot {
     return match;
   }
 }
-
+/**
+ * Checks if the threshold is hit either up or down
+ * If it is, it returns true or false
+ * @param {number} baseprice
+ * @param {number} currentprice
+ * @param {number} threshold
+ * @returns {boolean} returns true or false
+ */
 function hasThreshold(
   baseprice: number,
   currentprice: number,
@@ -41,6 +48,17 @@ function hasThreshold(
 // dictionary map holder for base prices
 const baseprices: { [pair: string]: number } = {};
 
+/**
+ * This is the brains
+ * It gets the tickers, the filters to the specific currency pairs
+ * Then it goes through the currency pairs:
+ * 1.  adds a price in the dictionary
+ * 2.  keeps reading until the threshold hits (either up or down)
+ *
+ * When it hits, it will use that price as the new starting price
+ * @param {string[]} currencies list of currencies as an array of strings
+ * @param {UpholdBot} upholdBot instance of UpholdBot class
+ */
 async function PriceBotOscillator(
   currencies: string[],
   upholdBot: UpholdBot
@@ -78,8 +96,10 @@ function start(currencies: string[]) {
     PriceBotOscillator(currencies, upholdBot);
     console.log(interval);
     interval++;
+    // instead of using an infinite loop, just did a recursive call spaced by 5 seconds
+    // this allows it to keep running without stopping invoking every 5 seconds
     start(currencies);
   }, 5000);
 }
-
+// you can add as many currencies as you want
 start(['BTCUSD']);
