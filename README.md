@@ -21,7 +21,7 @@ npm run build
 By default, the .vscode/launch.json is set up for breakpoints in vsCode
 Inside of vsCode, click the debug button and then toward top click the green arrow to start the javascript debug terminal
 
-[<img src="https://github.com/spencerdavis2000/pricebot/blob/9b718d2b8bb8a58468750076c07516b4a9f5d471/docs/img/debug.PNG" width="200" height="200">]
+[<img src="https://github.com/spencerdavis2000/pricebot/blob/9b718d2b8bb8a58468750076c07516b4a9f5d471/docs/img/debug.PNG" width="300" height="300">]
 
 You can put in breakpoints in the index.ts if you wish
 In index.ts enter currency pair (currencly handles only one)
@@ -36,4 +36,4 @@ npm run start
 
 
 Output should look like this
-![output](docs/img/output.png)
+![output](https://github.com/spencerdavis2000/pricebot/blob/3dc77261d239ec9f02dec281ab2f7edb7b56fa5b/docs/img/output.PNG)
