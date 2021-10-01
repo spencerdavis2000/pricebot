@@ -101,5 +101,5 @@ function start(currencies: string[]) {
     start(currencies);
   }, 5000);
 }
-// you can add as many currencies as you want
+// Right now it only works with 1 currency but future plans would be to include multiple
 start(['BTCUSD']);

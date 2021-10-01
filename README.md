@@ -24,7 +24,16 @@ Inside of vsCode, click the debug button and then toward top click the green arr
 [<img src="https://github.com/spencerdavis2000/pricebot/blob/9b718d2b8bb8a58468750076c07516b4a9f5d471/docs/img/debug.PNG" width="200" height="200">]
 
 You can put in breakpoints in the index.ts if you wish
+In index.ts enter currency pair (currencly handles only one)
 
 ```
+start(['BTCUSD']);
+```
+```
+npm run build
 npm run start
 ```
+
+
+Output should look like this
+![output](docs/img/output.png)
