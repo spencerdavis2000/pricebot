@@ -63,7 +63,7 @@ async function PriceBotOscillator(
   currencies: string[],
   upholdBot: UpholdBot
 ): Promise<void> {
-  const tickers = await upholdBot.getTickers();
+  await upholdBot.getTickers();
   const myTickers = await upholdBot.getCurrencyPairs(currencies);
   myTickers.map((ticker) => {
     // if it does exist find out threshold
