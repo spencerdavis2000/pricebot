@@ -37,3 +37,12 @@ npm run start
 
 Output should look like this
 ![output](https://github.com/spencerdavis2000/pricebot/blob/3dc77261d239ec9f02dec281ab2f7edb7b56fa5b/docs/img/output.PNG)
+
+# Future Plans
+- Make it a lambda on aws
+- Docker application on EC3 on aws or Azure
+- Write unit tests
+- Handle multiple currencies
+- SMS notifications
+- Android/ios app to consume with notifications
+- Maybe make it into an express app
